@@ -1,3 +1,7 @@
+"""
+Functions and scripts for geometry analysis
+"""
+
 #This is my geometry analysis code
 import numpy
 import os
@@ -55,7 +59,7 @@ def bond_check(bond_distance, minimum = 0.0, maximum = 1.5):#min and max are set
     #Check that atom distance is a float
     if not isinstance(bond_distance, float):
         raise TypeError(F'bond_distance must be type float. {bond_distance}')
-        
+
     if bond_distance < maximum and bond_distance > minimum:  #forgets to set min or max
         return True
     else:
